@@ -1,0 +1,185 @@
+body {
+    background-color: #181515;
+    color: white;
+    font-family: "Calibri Light", sans-serif;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 20px;
+    margin-top: 70px;
+}
+
+.wrapper {
+    position: relative;
+    width: 630px;
+    margin-left: 140px;
+}
+
+.item {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    transition: all 0.4s;
+}
+
+.extra {
+    transition: all 0.4s;
+    z-index: 200;
+}
+
+.arrow {
+    border: none;
+    opacity: 0.93;
+}
+
+.game-menu {
+    position: absolute;
+    background: rgba(27, 24, 24, 0.952);
+    text-align: center;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    height: 80%;
+    font-size: 2em;
+    z-index: 500;
+}
+
+.menu {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 80%;
+    z-index: 500;
+}
+
+.description {
+    font-size: 0.7em;
+    text-align: justify;
+    padding: 2em;
+}
+
+#player-data {
+    font-size: 1.8em;
+    background-color: #282323;
+    text-align: center;
+    padding: 1em;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0.5em;
+    padding: 0.3em;
+}
+
+.treasure-icon {
+    width: 2.5em;
+}
+
+.random-treasure {
+    position: absolute;
+    pointer-events: none;
+
+    width: 3em;
+    padding: 1em;
+    z-index: 300;
+    transition: all 0.4s;
+}
+
+.player-color {
+    width: 1.5em;
+}
+
+.current-player1 {
+    border-radius: 0.6em;
+    border: 2px solid #726C91;
+    padding: 0.3em;
+    gap: 0.5em;
+    margin: 0.5em;
+    align-items: center;
+}
+
+.current-player2 {
+    border-radius: 0.6em;
+    border: 2px solid #B6CBE2;
+    padding: 0.3em;
+    gap: 0.5em;
+    margin: 0.5em;
+    align-items: center;
+}
+
+.current-player3 {
+    border-radius: 0.6em;
+    border: 2px solid #FDDCA5;
+    padding: 0.3em;
+    gap: 0.5em;
+    margin: 0.5em;
+    align-items: center;
+}
+
+.current-player4 {
+    border-radius: 0.6em;
+    border: 2px solid #9FB573;
+    padding: 0.3em;
+    gap: 0.5em;
+    margin: 0.5em;
+    align-items: center;
+}
+
+#game-ower {
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+}
+
+#the-winner-is {
+    font-size: 1em;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.playerImg {
+    width: 25px;
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.4s;
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 1270px) {
+    #player-data {
+        font-size: 1.65em;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    #player-data {
+        font-size: 1.5em;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #player-data {
+        font-size: 1.2em;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="icon" href="style/fix/img_60.png">
+    <title>OJSHLM - Beadandó</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="wrapper">
+            <div id="movable-players">
+                <span id="mPlayer-1" class="playerImg" style="top: 5px; left: 5px; z-index: 100; display: none;"><img
+                        src="style/p1.png" alt=""></span>
+                <span id="mPlayer-2" class="playerImg" style="top: 5px; left: 455px; z-index: 100; display: none;"><img
+                        src="style/p2.png" alt=""></span>
+                <span id="mPlayer-3" class="playerImg" style="top: 455px; left: 5px; z-index: 100; display: none;"><img
+                        src="style/p3.png" alt=""></span>
+                <span id="mPlayer-4" class="playerImg"
+                    style="top: 455px; left: 455px; z-index: 100; display: none;"><img src="style/p4.png" alt=""></span>
+            </div>
+        </div>
+
+        <div id="start-menu" class="game-menu">
+            <div class="menu">
+                Játékosok száma:
+                <span id="p-out">2</span><br>
+                <input id="player-amount" type="range" min="2" max="4" value="2" class="slider"><br>
+
+                Kincsek száma:
+                <span id="t-out">2</span><br>
+                <input id="treasure-amount" type="range" min="2" max="12" value="2" class="slider"><br>
+
+                <button id="description-button" onclick="showGameDescription()">Játék leírása</button>
+                <button id="start-button" onclick="hideStart();startButton()">Játék kezdése</button><br>
+
+                <span class="description" id="description" style="display: none;">
+                    <b>A játék leírása:</b><br>
+                    A katakomba szobáit egy 7x7 - es négyzetrács cellái jelképezik. Minden szoba esetén adott, hogy mely
+                    falain van ajtó. Ha két szomszédos szoba érintkező falán egy - egy ajtó van, akkor át lehet menni
+                    egyik szobából a másikba. A négyzetrács páros sorait és oszlopait el lehet tolni, a többi szoba
+                    végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül utak nyílnak a szobák között,
+                    így lehet eljutni a kincsekhez. Mindegyik kérő arra törekszik, hogy a katakomba szobáinak ötletes
+                    eltolásával eljusson a kincsekhez. Aki elsőként találja meg mindahányat és kiindulópontjára
+                    sikeresen visszaérkezik az a nyertes.<br><br>
+                    <b>Irányítás:</b><br>
+                    [space] - extra szoba forgatása <br>
+                    [kattintás nyilakra] - extra szoba betolása <br>
+                    [kattintás mezőkre] - soron következő játékos léptetése
+                </span>
+            </div>
+        </div>
+
+        <div id="end-menu" class="game-menu" style="display: none;">
+            <div class="menu">
+                <span id="game-ower">Játék vége<br></span>
+                <span id="the-winner-is">Nyertes:</span>
+                <span id="winner"></span><br>
+                <button onclick="location.reload()">Játék újrakezdése</button><br>
+            </div>
+        </div>
+
+        <div id="player-data" style="display: none;">
+            <span id="player-1" style="display: none;" class="player"><br></span>
+            <span id="player-2" style="display: none;" class="player"><br></span>
+            <span id="player-3" style="display: none;" class="player"><br></span>
+            <span id="player-4" style="display: none;" class="player"><br></span>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
